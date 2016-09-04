@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace lab4_1
+namespace lab41
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
+            const string searchFile = "searchFile.txt";
+
+            Exec.Search(searchFile);
         }
     }
 }
