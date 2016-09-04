@@ -5,7 +5,7 @@ namespace lab41
 {
     public class Exec
     {
-        private static void SearchFolders(string folderPath, string fileMask, string searchResult)
+        private static void SearchFolder(string folderPath, string fileMask, string searchResult)
         {
             StreamWriter sw = new StreamWriter(searchResult, true);
 
@@ -28,7 +28,7 @@ namespace lab41
 
             foreach (string subFolderPath in Directory.GetDirectories(folderPath))
             {
-                SearchFolders(subFolderPath, fileMask, searchResult);
+                SearchFolder(subFolderPath, fileMask, searchResult);
             }
         }
 
@@ -45,7 +45,7 @@ namespace lab41
             Console.Write("mask: ");
             string fileMask = Console.ReadLine();
 
-            SearchFolders(folderPath, fileMask, folderPath + "\\" + searchResult);
+            SearchFolder(folderPath, fileMask, folderPath + "\\" + searchResult);
         }
     }
 }
